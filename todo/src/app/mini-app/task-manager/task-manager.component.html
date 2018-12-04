@@ -1,0 +1,22 @@
+<p>
+  task-manager works!
+</p>
+<br>
+Task:
+<input type="text" [(ngModel)]='oneTask' placeholder="Add your work...">
+<button (click)="sayHello()">Add Task</button>{{oneTask}}
+<br>Pending:
+<br>
+<ol>
+  <li *ngFor="let task of myTasks;let ct= index">
+    {{task}} at {{ct}} position!
+    &nbsp;
+    <button (click)="taskDone(ct)">Done</button>
+     
+    </li>
+    <br>
+    <label>
+    Completed:</label>
+ <li *ngFor="let completed of completedTask">
+{{completed}} is completed</li>
+</ol>
