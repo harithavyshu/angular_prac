@@ -9,7 +9,7 @@ Task:
 <br>
 <ol>
   <li *ngFor="let task of myTasks;let ct= index">
-    {{task}} at {{ct}} position!
+    {{task | uppercase}} at {{ct}} position!
     &nbsp;
     <button (click)="taskDone(ct)">Done</button>
      
@@ -20,3 +20,15 @@ Task:
  <li *ngFor="let completed of completedTask">
 {{completed}} is completed</li>
 </ol>
+<hr>
+Currency pipe:{{salary | currency:'INR'}}           
+<br>    
+Date Pipe:{{myDate | date}}      
+ <br>
+UnSorted Friends:{{ friends }}
+<br>
+Sorted Friends:{{ friends | stringSortPipe:'dsc' }}  
+<br>
+NumberSort:{{score}}       
+<br>
+Sorted Score :{{score}}                                                                                                                                                                

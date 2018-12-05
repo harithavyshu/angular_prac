@@ -7,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TaskManagerComponent implements OnInit {
 counter = 0;
+score =[25,44,40,60,78]
+salary=88;
 oneTask="";
 myTasks=[];
+friends=['hari','azzu','lav','dhanu'];
 completedTask=[];
   constructor() { }
 
