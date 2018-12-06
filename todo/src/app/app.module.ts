@@ -15,8 +15,10 @@ import { LocalService1Service } from './services/local-service1.service';
 import { UsersAPIComponentComponent } from './remote/users-apicomponent/users-apicomponent.component';
 import { HttpClientModule } from "@angular/common/http";
 import { TemplateFormComponent } from './form/template-form/template-form.component';
-
-
+import { ModelFormComponent } from './form/model-form/model-form.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { AnimationFormComponent } from './animation/animation-form/animation-form.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 @NgModule({
   declarations: [
     AppComponent,
@@ -30,10 +32,16 @@ import { TemplateFormComponent } from './form/template-form/template-form.compon
     StringSortPipePipe,
     NumbergSortPipePipe,
     TemplateFormComponent,
+    ModelFormComponent,
+    AnimationFormComponent,
   ],
   imports: [
-    BrowserModule, FormsModule, HttpClientModule,
-RouterModule.forRoot([
+    BrowserModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    RouterModule.forRoot([
       {
         path: '',
         redirectTo: 'family',
@@ -72,7 +80,15 @@ RouterModule.forRoot([
       },
       {
         path: 'templateForm',
-        component:TemplateFormComponent
+        component: TemplateFormComponent
+      },
+      {
+        path: 'modelForm',
+        component: ModelFormComponent
+      },
+      {
+        path: 'animationForm',
+        component: AnimationFormComponent
       },
     ])
 

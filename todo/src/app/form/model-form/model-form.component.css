@@ -1,0 +1,5 @@
+
+button[type="submit"]:disabled{
+    color:blue;
+    background-color: gray;
+}
